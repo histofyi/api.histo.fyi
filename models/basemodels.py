@@ -1,9 +1,9 @@
 from typing import List, Dict, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from pydantic import ValidationError
+import importlib
+import json
 
 
-class ConfigModel(BaseModel):
+class ExtendedModel(BaseModel):
     pass
-    #class Config:
-    #    alias_generator = humps.camelize

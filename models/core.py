@@ -1,10 +1,11 @@
 from typing import List, Dict, Optional
 from pydantic import Field
-from .basemodels import ConfigModel
+from .basemodels import ExtendedModel
 
 
-class Core(ConfigModel):
-    pdb_code : Optional[str] = Field(
-        default=None, title="The PDB code of the structure", max_length=32
+class Core(ExtendedModel):
+    pdb_code : str = Field(
+        default=None, title="The PDB code of the structure", max_length=4
     )
-    name : Optional[str]
+    allele : Optional[str]
+            
